@@ -8,3 +8,11 @@ variable "vpc_tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "subnets" {
+  description = "A list of subnet configurations"
+  type = map(object({
+    cidr_block = string
+    availability_zone = string
+  }))
+}
