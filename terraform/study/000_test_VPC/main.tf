@@ -11,4 +11,5 @@ module "vpc" {
       availability_zone = "us-east-1a"
     }
   }
+  region = "us-east-1"
 }
