@@ -53,3 +53,9 @@ variable "user_data" {
   type        = string
   default     = null
 }
+
+variable "security_groups" {
+  description = "List of security group names to associate with the EC2 instance (for non-VPC instances)"
+  type = list(string)
+  default = []
+}

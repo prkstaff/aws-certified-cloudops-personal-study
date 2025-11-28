@@ -8,6 +8,7 @@ locals {
   )
 
 }
+
 resource "aws_instance" "web" {
   ami                    = var.ami
   instance_type          = var.instance_type
@@ -19,6 +20,7 @@ resource "aws_instance" "web" {
 
   tags = local.ec2_tags
 
-  # Optional: basic user data to update and install something on first boot
+  security_groups = var.security_groups
+
   user_data = var.user_data
 }
